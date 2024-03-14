@@ -1,15 +1,15 @@
 /*
  * @Author       : 高江华 g598670138@163.com
  * @Date         : 2022-09-01 14:25:35
- * @LastEditors  : 高江华 g598670138@163.com
- * @LastEditTime : 2022-09-03 14:16:09
+ * @LastEditors: 高江华
+ * @LastEditTime: 2024-03-14 10:19:05
  * @FilePath     : \web-B-tmp\src\store\permission.ts
  * @Description  :
  *
  * Copyright (c) 2022 by 高江华 g598670138@163.com, All Rights Reserved.
  */
 import { defineStore } from 'pinia'
-import { privateRoutes, publicRoutes } from '@/router'
+import { publicRoutes } from '@/router'
 
 const usePermissionStore = defineStore('permission', {
     state: () => {
@@ -29,9 +29,9 @@ const usePermissionStore = defineStore('permission', {
          */
         filterRoutes(menus: any): any {
             let routes: any = []
-            menus.forEach((key: string) => {
-                routes.push(...privateRoutes.filter((item: any) => item.name === key))
-            })
+            // menus.forEach((key: string) => {
+            //     routes.push(...privateRoutes.filter((item: any) => item.name === key))
+            // })
             /**
              * 所有不匹配路由进入 404 页面
              * 该页面路由必须在所有路由指定后添加
