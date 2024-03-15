@@ -17,6 +17,7 @@
     "@fullcalendar/core": "^5.11.2",
     "@fullcalendar/daygrid": "^5.11.2",
     "@fullcalendar/interaction": "^5.11.2",
+    "@njleonzhang/postcss-px-to-rem": "^1.0.1",
     "@qiun/ucharts": "^2.4.3-20220505",
     "@toast-ui/editor": "^3.2.0",
     "@types/nprogress": "^0.2.0",

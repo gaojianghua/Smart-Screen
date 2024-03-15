@@ -19,7 +19,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base:'./',
+    base: './',
     plugins: [
         AutoImport({
             resolvers: [ElementPlusResolver()]
@@ -39,6 +39,14 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': join(__dirname, '/src')
+        }
+    },
+    css: {
+        // 全局配置 utils.scs，详细配置参考 vue-cli 官网
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@import "@/styles/utils.scss";`
+            }
         }
     }
 })

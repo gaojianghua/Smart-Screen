@@ -28,8 +28,8 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'vue/multi-word-component-names': 'off',
         'no-unused-vars': 'off',
-        'prettier/prettier': 'error',
         'space-before-function-paren': 0,
-        "no-undef": "off"
+        'no-undef': 'off',
+        'prettier/prettier': ['error', { endOfLine: 'auto' }]
     }
 }

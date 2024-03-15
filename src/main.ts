@@ -23,6 +23,7 @@ import App from './App.vue'
 import './mock'
 import filters from '@/filters'
 import directives from '@/directives'
+import './utils/rem.js'
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
