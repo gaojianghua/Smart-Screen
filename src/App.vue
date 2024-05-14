@@ -13,16 +13,15 @@
 </template>
 
 <script setup lang="ts">
-import useStore from './store'
-import { generateNewStyle, writeNewStyle } from '@/utils/conversion'
-import { watchSwitchLang } from '@/utils/routeI18n'
+import autofit from 'autofit.js'
+import { onMounted, ref } from 'vue'
 
-generateNewStyle(useStore().common.mainColor).then((newStyle: string) => {
-    writeNewStyle(newStyle)
-})
-watchSwitchLang(() => {
-    if (useStore().user.token) {
-        useStore().user.getProfile()
-    }
+onMounted(() => {
+    autofit.init({
+        dh: 1080,
+        dw: 1920,
+        el: 'body',
+        resize: true
+    })
 })
 </script>

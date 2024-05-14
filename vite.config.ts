@@ -15,17 +15,21 @@ import path, { join } from 'path'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
     base: './',
     plugins: [
         AutoImport({
-            resolvers: [ElementPlusResolver()]
+            resolvers: [AntDesignVueResolver()]
         }),
         Components({
-            resolvers: [ElementPlusResolver()]
+            resolvers: [
+                AntDesignVueResolver({
+                    importStyle: false
+                })
+            ]
         }),
         createSvgIconsPlugin({
             // 指定需要缓存的图标文件夹

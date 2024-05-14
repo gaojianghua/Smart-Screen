@@ -2,9 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './mixin.scss';
 @import './transition.scss';
-@import './variables.module.scss';
 
 html,
 body {
